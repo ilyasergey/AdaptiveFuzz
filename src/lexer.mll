@@ -310,7 +310,7 @@ and finishName recur = parse
   '"' [^ '\n']* { recur lexbuf }
 
 and string = parse
-  '"'  { Parser.STRINGV {i = !startLex; v=getStr()} }
+  '"'  { Parser.STRINGV {i = !startLex; v= Bytes.to_string @@ getStr()} }
 | '\\' { addStr(escaped lexbuf); string lexbuf }
 | '\n' { addStr '\n'; newline lexbuf; string lexbuf }
 | eof  { lex_error (!startLex) "String not terminated" }

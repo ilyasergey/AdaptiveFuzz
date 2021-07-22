@@ -20,8 +20,8 @@ For instance, the following call runs the vectorized gradient descent
 example with the arguments 1000, 11, and "data/census-sample.data" (which 
 indicate a database size of 1000, an epsilon of 2^(-11), and the sample 
 database file).
-$ ./fuzz examples/gradient-descent-vector.fz -args 1000 11 
-"data/census-sample.data"
+
+$ ./fuzz examples/gradient-descent-vector.fz -args 1000 11 "examples/data/census-sample.data"
 
 
 How to write programs

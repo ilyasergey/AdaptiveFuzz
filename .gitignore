@@ -70,3 +70,5 @@ _build/
 Network Trash Folder
 Temporary Items
 .apdisk
+fuzz 
+src/data*.ml
